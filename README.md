@@ -1,2 +1,54 @@
 # Libft
-First project in the 42SP school
+
+![42 São Paulo](https://img.shields.io/badge/42-SP-000000)
+
+## Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [How to Compile](#how-to-compile)
+- [How to Use](#how-to-use)
+- [File Structure](#file-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## About
+
+The **Libft** project is a custom library created as part of the curriculum at [42 São Paulo](https://www.42sp.org.br/). This project serves as the starting point for many other projects at 42, providing basic functions that replace and complement the standard C library functions.
+
+## Features
+
+Libft includes various utility functions for string manipulation, memory management, linked lists, and other common operations in C. Some of the features include:
+
+- String manipulation (`ft_strlen`, `ft_strcpy`, `ft_strncpy`, etc.)
+- Memory management (`ft_memset`, `ft_memcpy`, `ft_memccpy`, etc.)
+- Linked list management (`ft_lstnew`, `ft_lstadd`, `ft_lstdelone`, etc.)
+- Additional functions (`ft_atoi`, `ft_isalpha`, `ft_tolower`, etc.)
+
+## How to Compile
+
+To compile the library, you can use the provided Makefile. Run the following commands in the terminal:
+
+```sh
+make
+```
+
+This will generate the libft.a file, which can be included in other projects.
+
+To clean up the object files generated during compilation:
+```sh
+make clean
+```
+
+To clean all generated files, including libft.a:
+```sh
+make re
+```
+
+## How to Use
+
+To use Libft in your projects, include the library header and link the libft.a file during compilation:
+```c
+#include "libft.h"
+```
+
