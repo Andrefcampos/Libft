@@ -36,11 +36,13 @@ make
 This will generate the libft.a file, which can be included in other projects.
 
 To clean up the object files generated during compilation:
+
 ```sh
 make clean
 ```
 
 To clean all generated files, including libft.a:
+
 ```sh
 make re
 ```
@@ -48,7 +50,47 @@ make re
 ## How to Use
 
 To use Libft in your projects, include the library header and link the libft.a file during compilation:
+
 ```c
 #include "libft.h"
 ```
+When compiling your project, add libft.a to the compiler command line:
 
+```shell
+gcc -Wall -Wextra -Werror -o my_program my_program.c libft.a
+```
+
+## File Structure
+
+The project directory structure is organized as follows:
+
+```
+libft/
+├── includes/
+│   └── libft.h
+├── src/
+│   └── aditionals/
+│   └── list/
+│   └── memory/
+│   └── string/
+├── Makefile
+├── README.md
+```
+- includes/: Contains the libft.h header file;
+- src/: Contains the source code files for the library;
+- Makefile: Build script;
+- README.md: Project documentation.
+
+## Contributing
+
+Contributions are welcome! If you want to contribute to this project, please follow the steps below:
+
+1. Fork the project
+2. Create a branch for your feature (git checkout -b feature/new-feature)
+3. Commit your changes (git commit -am 'Add new feature')
+4. Push to the branch (git push origin feature/new-feature)
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE]() file for more details.
