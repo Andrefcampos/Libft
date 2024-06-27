@@ -6,7 +6,7 @@
 #    By: andrefil <andrefil@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/10 11:57:28 by andrefil          #+#    #+#              #
-#    Updated: 2024/06/25 23:37:24 by andrefil         ###   ########.fr        #
+#    Updated: 2024/06/27 14:46:18 by andrefil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,22 +78,23 @@ SRC_FILES	+=	$(addprefix src/list/, \
 OBJS_DIR	:=	src/objs/
 OBJS		:=	$(SRC_FILES:%.c=$(OBJS_DIR)%.o)
 
-
+#------------------ COMPILATION -------------#
 all: $(NAME)
 
 $(OBJS_DIR)%.o:%.c
-	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $(OBJS_DIR)
-	ar rcs $(NAME) $(OBJS)
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS_DIR)
+	@rm -rf $(OBJS_DIR)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
 .PHONY : all clean fclean re
+.SILENT:
